@@ -9,24 +9,12 @@
 /* Begin PBXBuildFile section */
 		CB7BA16D2BED9F1900CB8BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA16C2BED9F1900CB8BC9 /* AppDelegate.swift */; };
 		CB7BA16F2BED9F1900CB8BC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA16E2BED9F1900CB8BC9 /* SceneDelegate.swift */; };
-		CB7BA1712BED9F1900CB8BC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA1702BED9F1900CB8BC9 /* ViewController.swift */; };
-		CB7BA1742BED9F1900CB8BC9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA1732BED9F1900CB8BC9 /* Base */; };
 		CB7BA1762BED9F1A00CB8BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA1752BED9F1A00CB8BC9 /* Assets.xcassets */; };
 		CB7BA1792BED9F1A00CB8BC9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA1782BED9F1A00CB8BC9 /* Base */; };
-		CB7BA1842BED9F1A00CB8BC9 /* Social_MediafyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA1832BED9F1A00CB8BC9 /* Social_MediafyTests.swift */; };
-		CB7BA18E2BED9F1A00CB8BC9 /* Social_MediafyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA18D2BED9F1A00CB8BC9 /* Social_MediafyUITests.swift */; };
-		CB7BA1902BED9F1A00CB8BC9 /* Social_MediafyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA18F2BED9F1A00CB8BC9 /* Social_MediafyUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		CB7BA1802BED9F1A00CB8BC9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB7BA1612BED9F1900CB8BC9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB7BA1682BED9F1900CB8BC9;
-			remoteInfo = "Social Mediafy";
-		};
-		CB7BA18A2BED9F1A00CB8BC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CB7BA1612BED9F1900CB8BC9 /* Project object */;
 			proxyType = 1;
@@ -39,16 +27,10 @@
 		CB7BA1692BED9F1900CB8BC9 /* Social Mediafy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Mediafy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7BA16C2BED9F1900CB8BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB7BA16E2BED9F1900CB8BC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB7BA1702BED9F1900CB8BC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CB7BA1732BED9F1900CB8BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB7BA1752BED9F1A00CB8BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB7BA1782BED9F1A00CB8BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB7BA17A2BED9F1A00CB8BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7BA17F2BED9F1A00CB8BC9 /* Social MediafyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social MediafyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB7BA1832BED9F1A00CB8BC9 /* Social_MediafyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_MediafyTests.swift; sourceTree = "<group>"; };
-		CB7BA1892BED9F1A00CB8BC9 /* Social MediafyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social MediafyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB7BA18D2BED9F1A00CB8BC9 /* Social_MediafyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_MediafyUITests.swift; sourceTree = "<group>"; };
-		CB7BA18F2BED9F1A00CB8BC9 /* Social_MediafyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_MediafyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +48,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB7BA1862BED9F1A00CB8BC9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +56,6 @@
 			children = (
 				CB7BA16B2BED9F1900CB8BC9 /* Social Mediafy */,
 				CB7BA1822BED9F1A00CB8BC9 /* Social MediafyTests */,
-				CB7BA18C2BED9F1A00CB8BC9 /* Social MediafyUITests */,
 				CB7BA16A2BED9F1900CB8BC9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +65,6 @@
 			children = (
 				CB7BA1692BED9F1900CB8BC9 /* Social Mediafy.app */,
 				CB7BA17F2BED9F1A00CB8BC9 /* Social MediafyTests.xctest */,
-				CB7BA1892BED9F1A00CB8BC9 /* Social MediafyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,8 +74,6 @@
 			children = (
 				CB7BA16C2BED9F1900CB8BC9 /* AppDelegate.swift */,
 				CB7BA16E2BED9F1900CB8BC9 /* SceneDelegate.swift */,
-				CB7BA1702BED9F1900CB8BC9 /* ViewController.swift */,
-				CB7BA1722BED9F1900CB8BC9 /* Main.storyboard */,
 				CB7BA1752BED9F1A00CB8BC9 /* Assets.xcassets */,
 				CB7BA1772BED9F1A00CB8BC9 /* LaunchScreen.storyboard */,
 				CB7BA17A2BED9F1A00CB8BC9 /* Info.plist */,
@@ -113,18 +84,8 @@
 		CB7BA1822BED9F1A00CB8BC9 /* Social MediafyTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB7BA1832BED9F1A00CB8BC9 /* Social_MediafyTests.swift */,
 			);
 			path = "Social MediafyTests";
-			sourceTree = "<group>";
-		};
-		CB7BA18C2BED9F1A00CB8BC9 /* Social MediafyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CB7BA18D2BED9F1A00CB8BC9 /* Social_MediafyUITests.swift */,
-				CB7BA18F2BED9F1A00CB8BC9 /* Social_MediafyUITestsLaunchTests.swift */,
-			);
-			path = "Social MediafyUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +126,6 @@
 			productReference = CB7BA17F2BED9F1A00CB8BC9 /* Social MediafyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CB7BA1882BED9F1A00CB8BC9 /* Social MediafyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB7BA1992BED9F1A00CB8BC9 /* Build configuration list for PBXNativeTarget "Social MediafyUITests" */;
-			buildPhases = (
-				CB7BA1852BED9F1A00CB8BC9 /* Sources */,
-				CB7BA1862BED9F1A00CB8BC9 /* Frameworks */,
-				CB7BA1872BED9F1A00CB8BC9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB7BA18B2BED9F1A00CB8BC9 /* PBXTargetDependency */,
-			);
-			name = "Social MediafyUITests";
-			productName = "Social MediafyUITests";
-			productReference = CB7BA1892BED9F1A00CB8BC9 /* Social MediafyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +140,6 @@
 						CreatedOnToolsVersion = 15.3;
 					};
 					CB7BA17E2BED9F1A00CB8BC9 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = CB7BA1682BED9F1900CB8BC9;
-					};
-					CB7BA1882BED9F1A00CB8BC9 = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = CB7BA1682BED9F1900CB8BC9;
 					};
@@ -221,7 +160,6 @@
 			targets = (
 				CB7BA1682BED9F1900CB8BC9 /* Social Mediafy */,
 				CB7BA17E2BED9F1A00CB8BC9 /* Social MediafyTests */,
-				CB7BA1882BED9F1A00CB8BC9 /* Social MediafyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,18 +171,10 @@
 			files = (
 				CB7BA1762BED9F1A00CB8BC9 /* Assets.xcassets in Resources */,
 				CB7BA1792BED9F1A00CB8BC9 /* Base in Resources */,
-				CB7BA1742BED9F1900CB8BC9 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CB7BA17D2BED9F1A00CB8BC9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB7BA1872BED9F1A00CB8BC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,7 +188,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB7BA1712BED9F1900CB8BC9 /* ViewController.swift in Sources */,
 				CB7BA16D2BED9F1900CB8BC9 /* AppDelegate.swift in Sources */,
 				CB7BA16F2BED9F1900CB8BC9 /* SceneDelegate.swift in Sources */,
 			);
@@ -268,16 +197,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB7BA1842BED9F1A00CB8BC9 /* Social_MediafyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB7BA1852BED9F1A00CB8BC9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB7BA18E2BED9F1A00CB8BC9 /* Social_MediafyUITests.swift in Sources */,
-				CB7BA1902BED9F1A00CB8BC9 /* Social_MediafyUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,22 +208,9 @@
 			target = CB7BA1682BED9F1900CB8BC9 /* Social Mediafy */;
 			targetProxy = CB7BA1802BED9F1A00CB8BC9 /* PBXContainerItemProxy */;
 		};
-		CB7BA18B2BED9F1A00CB8BC9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB7BA1682BED9F1900CB8BC9 /* Social Mediafy */;
-			targetProxy = CB7BA18A2BED9F1A00CB8BC9 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CB7BA1722BED9F1900CB8BC9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB7BA1732BED9F1900CB8BC9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB7BA1772BED9F1A00CB8BC9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -448,8 +354,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,9 +364,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.com.Social-Mediafy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -476,8 +387,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,9 +397,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.com.Social-Mediafy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -500,13 +416,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U84CV9QTZ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.com.Social-MediafyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Social Mediafy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Social Mediafy";
 			};
 			name = Debug;
@@ -520,50 +440,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U84CV9QTZ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.com.Social-MediafyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Social Mediafy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Social Mediafy";
-			};
-			name = Release;
-		};
-		CB7BA19A2BED9F1A00CB8BC9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U84CV9QTZ3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.com.Social-MediafyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Social Mediafy";
-			};
-			name = Debug;
-		};
-		CB7BA19B2BED9F1A00CB8BC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U84CV9QTZ3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.com.Social-MediafyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Social Mediafy";
 			};
 			name = Release;
 		};
@@ -593,15 +481,6 @@
 			buildConfigurations = (
 				CB7BA1972BED9F1A00CB8BC9 /* Debug */,
 				CB7BA1982BED9F1A00CB8BC9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB7BA1992BED9F1A00CB8BC9 /* Build configuration list for PBXNativeTarget "Social MediafyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB7BA19A2BED9F1A00CB8BC9 /* Debug */,
-				CB7BA19B2BED9F1A00CB8BC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
