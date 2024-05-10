@@ -1,0 +1,11 @@
+{
+    "id": "id",
+    "text": "This is an example",
+    "user": {
+        "id": "id",
+        "name": "Bot",
+        "nickname": "@bot"
+    },
+    "like_count": 100,
+    "comment_count": 10
+}

@@ -11,6 +11,13 @@
 		CB7BA16F2BED9F1900CB8BC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA16E2BED9F1900CB8BC9 /* SceneDelegate.swift */; };
 		CB7BA1762BED9F1A00CB8BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA1752BED9F1A00CB8BC9 /* Assets.xcassets */; };
 		CB7BA1792BED9F1A00CB8BC9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA1782BED9F1A00CB8BC9 /* Base */; };
+		CB7BA19E2BEDA35C00CB8BC9 /* TweetFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA19D2BEDA35C00CB8BC9 /* TweetFeed.swift */; };
+		CB7BA1A02BEDA3B500CB8BC9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA19F2BEDA3B500CB8BC9 /* User.swift */; };
+		CB7BA1A52BEDA4FD00CB8BC9 /* tweetDetailFake.json in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA1A32BEDA4FD00CB8BC9 /* tweetDetailFake.json */; };
+		CB7BA1A62BEDA4FD00CB8BC9 /* tweetFeedFake.json in Resources */ = {isa = PBXBuildFile; fileRef = CB7BA1A42BEDA4FD00CB8BC9 /* tweetFeedFake.json */; };
+		CB7BA1A82BEDA6C900CB8BC9 /* TweetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA1A72BEDA6C900CB8BC9 /* TweetDetail.swift */; };
+		CB7BA1B12BEDA91B00CB8BC9 /* TweetFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA1B02BEDA91B00CB8BC9 /* TweetFeedTests.swift */; };
+		CB7BA1BA2BEDAB7600CB8BC9 /* TweetDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BA1B92BEDAB7600CB8BC9 /* TweetDetailTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +38,13 @@
 		CB7BA1782BED9F1A00CB8BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB7BA17A2BED9F1A00CB8BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7BA17F2BED9F1A00CB8BC9 /* Social MediafyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social MediafyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7BA19D2BEDA35C00CB8BC9 /* TweetFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFeed.swift; sourceTree = "<group>"; };
+		CB7BA19F2BEDA3B500CB8BC9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CB7BA1A32BEDA4FD00CB8BC9 /* tweetDetailFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tweetDetailFake.json; sourceTree = "<group>"; };
+		CB7BA1A42BEDA4FD00CB8BC9 /* tweetFeedFake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tweetFeedFake.json; sourceTree = "<group>"; };
+		CB7BA1A72BEDA6C900CB8BC9 /* TweetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetail.swift; sourceTree = "<group>"; };
+		CB7BA1B02BEDA91B00CB8BC9 /* TweetFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFeedTests.swift; sourceTree = "<group>"; };
+		CB7BA1B92BEDAB7600CB8BC9 /* TweetDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,7 @@
 		CB7BA16B2BED9F1900CB8BC9 /* Social Mediafy */ = {
 			isa = PBXGroup;
 			children = (
+				CB7BA19C2BEDA1F900CB8BC9 /* Models */,
 				CB7BA16C2BED9F1900CB8BC9 /* AppDelegate.swift */,
 				CB7BA16E2BED9F1900CB8BC9 /* SceneDelegate.swift */,
 				CB7BA1752BED9F1A00CB8BC9 /* Assets.xcassets */,
@@ -84,8 +99,38 @@
 		CB7BA1822BED9F1A00CB8BC9 /* Social MediafyTests */ = {
 			isa = PBXGroup;
 			children = (
+				CB7BA1A92BEDA74F00CB8BC9 /* Model */,
+				CB7BA1A22BEDA4CA00CB8BC9 /* Utilities */,
 			);
 			path = "Social MediafyTests";
+			sourceTree = "<group>";
+		};
+		CB7BA19C2BEDA1F900CB8BC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB7BA19D2BEDA35C00CB8BC9 /* TweetFeed.swift */,
+				CB7BA1A72BEDA6C900CB8BC9 /* TweetDetail.swift */,
+				CB7BA19F2BEDA3B500CB8BC9 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB7BA1A22BEDA4CA00CB8BC9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB7BA1A42BEDA4FD00CB8BC9 /* tweetFeedFake.json */,
+				CB7BA1A32BEDA4FD00CB8BC9 /* tweetDetailFake.json */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CB7BA1A92BEDA74F00CB8BC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB7BA1B02BEDA91B00CB8BC9 /* TweetFeedTests.swift */,
+				CB7BA1B92BEDAB7600CB8BC9 /* TweetDetailTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +186,7 @@
 					};
 					CB7BA17E2BED9F1A00CB8BC9 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 						TestTargetID = CB7BA1682BED9F1900CB8BC9;
 					};
 				};
@@ -178,6 +224,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7BA1A62BEDA4FD00CB8BC9 /* tweetFeedFake.json in Resources */,
+				CB7BA1A52BEDA4FD00CB8BC9 /* tweetDetailFake.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7BA1A02BEDA3B500CB8BC9 /* User.swift in Sources */,
+				CB7BA1A82BEDA6C900CB8BC9 /* TweetDetail.swift in Sources */,
+				CB7BA19E2BEDA35C00CB8BC9 /* TweetFeed.swift in Sources */,
 				CB7BA16D2BED9F1900CB8BC9 /* AppDelegate.swift in Sources */,
 				CB7BA16F2BED9F1900CB8BC9 /* SceneDelegate.swift in Sources */,
 			);
@@ -197,6 +248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7BA1BA2BEDAB7600CB8BC9 /* TweetDetailTests.swift in Sources */,
+				CB7BA1B12BEDA91B00CB8BC9 /* TweetFeedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +406,6 @@
 				INFOPLIST_FILE = "Social Mediafy/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -386,7 +438,6 @@
 				INFOPLIST_FILE = "Social Mediafy/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -412,6 +463,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U84CV9QTZ3;
@@ -425,6 +477,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Social Mediafy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Social Mediafy";
@@ -436,6 +489,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U84CV9QTZ3;

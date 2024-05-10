@@ -1,0 +1,29 @@
+{
+    "id": "id",
+    "text": "This is an example",
+    "user": {
+        "id": "id",
+        "name": "Bot",
+        "nickname": "@bot"
+    },
+    "comments": [
+        {
+            "id": "id",
+            "text": "This is a comment example",
+            "user": {
+                "id": "id",
+                "name": "Bot 1",
+                "nickname": "@bot1"
+            }
+        },
+        {
+            "id": "id",
+            "text": "This is a comment example 2",
+            "user": {
+                "id": "id",
+                "name": "Bot 2",
+                "nickname": "@bot2"
+            }
+        }
+    ]
+}
