@@ -19,3 +19,7 @@ struct TweetComment: TweetProtocol, Codable {
     var text: String
     var user: User
 }
+
+struct TweetCommentRequest: Codable {
+    let text: String
+}

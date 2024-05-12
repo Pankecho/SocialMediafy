@@ -15,6 +15,7 @@ enum TweetAPIError: Error {
 
 protocol TweetAPIProtocol {
     func load(completion: @escaping (Result<[Tweet], Error>) -> ())
+    func like(id: String, completion: @escaping (Result<Void, Error>) -> ())
 }
 
 struct TweetAPI: TweetAPIProtocol {
@@ -42,6 +43,19 @@ struct TweetAPI: TweetAPIProtocol {
                 completion(.failure(TweetAPIError.parsingData))
             }
             
+        }.resume()
+    }
+    
+    func like(id: String, completion: @escaping (Result<Void, any Error>) -> ()) {
+        let request = Endpoint.likeTweet(id: id).request
+        
+        session.dataTask(with: request) { _, _, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            completion(.success(()))
         }.resume()
     }
 }

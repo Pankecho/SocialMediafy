@@ -100,7 +100,6 @@ final class TweetAPITests: XCTestCase {
         XCTAssertEqual(unwrappedError, .parsingData)
     }
     
-    
     func testResponseWithParsing() throws {
         // given
         let expectation = expectation(description: "tweetfeed expectation")
@@ -121,6 +120,42 @@ final class TweetAPITests: XCTestCase {
         // then
         wait(for: [expectation], timeout: 5.0)
         XCTAssertEqual(timeline.count, 3)
+    }
+    
+    func testLikeResponse() {
+        // given
+        let expectation = expectation(description: "tweetfeed like expectation")
+        var response = false
+        
+        // when
+        sut.like(id: "id") { result in
+            response = true
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5.0)
+        XCTAssertTrue(response)
+    }
+    
+    func testLikeResponseWithError() {
+        // given
+        let expectation = expectation(description: "tweetfeed like expectation")
+        var expectedError: TweetAPIError?
+        session.error = TweetAPIError.response
+        
+        // when
+        sut.like(id: "id") { result in
+            switch result {
+            case .failure(let error):
+                expectedError = error as? TweetAPIError
+                expectation.fulfill()
+            default:
+                break
+            }
+        }
+        
+        // then
+        wait(for: [expectation], timeout: 5.0)
+        XCTAssertNotNil(expectedError)
     }
 
     override func tearDown() {

@@ -24,6 +24,8 @@
 		CBECA7962BF1681E0015D8DD /* TweetFeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECA7952BF1681E0015D8DD /* TweetFeedAPI.swift */; };
 		CBECA7982BF168560015D8DD /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECA7972BF168560015D8DD /* Endpoint.swift */; };
 		CBECA79A2BF16ADF0015D8DD /* TweetFeedMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECA7992BF16ADF0015D8DD /* TweetFeedMock.swift */; };
+		CBECA79C2BF16F710015D8DD /* TweetDetailAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECA79B2BF16F710015D8DD /* TweetDetailAPITests.swift */; };
+		CBECA79E2BF16F850015D8DD /* TweetDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECA79D2BF16F850015D8DD /* TweetDetailAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		CBECA7952BF1681E0015D8DD /* TweetFeedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFeedAPI.swift; sourceTree = "<group>"; };
 		CBECA7972BF168560015D8DD /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CBECA7992BF16ADF0015D8DD /* TweetFeedMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFeedMock.swift; sourceTree = "<group>"; };
+		CBECA79B2BF16F710015D8DD /* TweetDetailAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailAPITests.swift; sourceTree = "<group>"; };
+		CBECA79D2BF16F850015D8DD /* TweetDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 				CBECA78C2BF167430015D8DD /* FakeSession.swift */,
 				CBECA78E2BF1676B0015D8DD /* MockData.swift */,
 				CBECA7922BF167C30015D8DD /* TweetFeedAPITests.swift */,
+				CBECA79B2BF16F710015D8DD /* TweetDetailAPITests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			children = (
 				CBECA7952BF1681E0015D8DD /* TweetFeedAPI.swift */,
 				CBECA7972BF168560015D8DD /* Endpoint.swift */,
+				CBECA79D2BF16F850015D8DD /* TweetDetailAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				CB7BA1A02BEDA3B500CB8BC9 /* User.swift in Sources */,
 				CB7BA1A82BEDA6C900CB8BC9 /* TweetDetail.swift in Sources */,
 				CB7BA19E2BEDA35C00CB8BC9 /* TweetFeed.swift in Sources */,
+				CBECA79E2BF16F850015D8DD /* TweetDetailAPI.swift in Sources */,
 				CB7BA16D2BED9F1900CB8BC9 /* AppDelegate.swift in Sources */,
 				CB7BA16F2BED9F1900CB8BC9 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +296,7 @@
 				CBECA7932BF167C30015D8DD /* TweetFeedAPITests.swift in Sources */,
 				CBECA78F2BF1676B0015D8DD /* MockData.swift in Sources */,
 				CBECA78D2BF167430015D8DD /* FakeSession.swift in Sources */,
+				CBECA79C2BF16F710015D8DD /* TweetDetailAPITests.swift in Sources */,
 				CB7BA1B12BEDA91B00CB8BC9 /* TweetFeedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

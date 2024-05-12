@@ -13,7 +13,7 @@ enum Endpoint {
     
     case timeline
     case likeTweet(id: String)
-    case commentTweet(id: String, comment: TweetComment)
+    case commentTweet(id: String, comment: String)
 }
 
 extension Endpoint {
@@ -29,7 +29,22 @@ extension Endpoint {
     }
     
     var request: URLRequest {
-        let url = URL(string: Endpoint.baseURL + string)!
-        return URLRequest(url: url)
+        switch self {
+        case .timeline:
+            let url = URL(string: Endpoint.baseURL + string)!
+            return URLRequest(url: url)
+        case .likeTweet(_):
+            let url = URL(string: Endpoint.baseURL + string)!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            return request
+        case .commentTweet(_, let comment):
+            let url = URL(string: Endpoint.baseURL + string)!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            let data = try? JSONEncoder().encode(TweetCommentRequest(text: comment))
+            request.httpBody = data
+            return request
+        }
     }
 }
