@@ -13,7 +13,7 @@ protocol TweetProtocol {
     var user: User { get set }
 }
 
-struct TweetFeed: TweetProtocol, Codable {
+struct Tweet: TweetProtocol, Codable {
     var id: String
     var text: String
     var user: User
@@ -21,7 +21,7 @@ struct TweetFeed: TweetProtocol, Codable {
     let commentCount: Int
 }
 
-extension TweetFeed {
+extension Tweet {
     private enum CodingKeys: String, CodingKey {
         case id, text, user
         case likeCount = "like_count"

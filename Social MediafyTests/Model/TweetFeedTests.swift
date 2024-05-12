@@ -16,7 +16,7 @@ final class TweetFeedTests: XCTestCase {
         }
 
         let data = try Data(contentsOf: URL(fileURLWithPath: path))
-        let sut = try JSONDecoder().decode(TweetFeed.self, from: data)
+        let sut = try JSONDecoder().decode(Tweet.self, from: data)
 
         XCTAssertEqual(sut.id, "id")
         XCTAssertEqual(sut.text, "This is an example")
