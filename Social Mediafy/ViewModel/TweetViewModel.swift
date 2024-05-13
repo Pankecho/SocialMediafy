@@ -8,6 +8,7 @@
 import Foundation
 
 protocol TweetViewModelProtocol {
+    var id: String { get }
     var content: String { get }
     var nickName: String { get }
     var userName: String { get }
@@ -19,6 +20,10 @@ protocol TweetViewModelProtocol {
 
 struct TweetViewModel: TweetViewModelProtocol {
     private let item: Tweet
+    
+    var id: String {
+        return item.id
+    }
     
     var content: String {
         return item.text

@@ -44,6 +44,7 @@
 		CBECA7C52BF1E8E30015D8DD /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECA7C42BF1E8E30015D8DD /* TweetCell.swift */; };
 		CBECA7C82BF1E9870015D8DD /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECA7C72BF1E9870015D8DD /* UIFont.swift */; };
 		CBECA7CA2BF1EB640015D8DD /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECA7C92BF1EB640015D8DD /* UIImage.swift */; };
+		CBECA7CC2BF1F8450015D8DD /* TweetCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECA7CB2BF1F8450015D8DD /* TweetCommentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		CBECA7C42BF1E8E30015D8DD /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		CBECA7C72BF1E9870015D8DD /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CBECA7C92BF1EB640015D8DD /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		CBECA7CB2BF1F8450015D8DD /* TweetCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCommentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				CBECA7BE2BF1E5A90015D8DD /* DetailViewController.swift */,
+				CBECA7CB2BF1F8450015D8DD /* TweetCommentCell.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				CBECA7BA2BF1E54A0015D8DD /* MainCoordinator.swift in Sources */,
 				CBECA7C52BF1E8E30015D8DD /* TweetCell.swift in Sources */,
 				CB7BA16F2BED9F1900CB8BC9 /* SceneDelegate.swift in Sources */,
+				CBECA7CC2BF1F8450015D8DD /* TweetCommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,8 @@ final class FeedViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
-        tableView.register(TweetCell.self, 
+        tableView.delegate = self
+        tableView.register(TweetCell.self,
                            forCellReuseIdentifier: "cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -92,5 +93,16 @@ extension FeedViewController: UITableViewDataSource {
         let item = viewModel.getItem(at: indexPath.row)
         cell.configure(using: item)
         return cell
+    }
+}
+
+extension FeedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard viewModel.tweetCount > 0 else {
+            return
+        }
+        
+        let item = viewModel.getItem(at: indexPath.row)
+        delegate?.routeToDetail(id: item.id)
     }
 }
