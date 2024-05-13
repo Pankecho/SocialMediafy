@@ -11,7 +11,14 @@ struct TweetDetail: TweetProtocol, Codable {
     var id: String
     var text: String
     var user: User
-    let comments: [TweetComment]
+    var comments: [TweetComment]
+    
+    static let empty = TweetDetail(id: "",
+                                   text: "",
+                                   user: .init(id: "",
+                                               name: "",
+                                               nickname: ""),
+                                   comments: [])
 }
 
 struct TweetComment: TweetProtocol, Codable {

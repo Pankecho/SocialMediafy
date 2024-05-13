@@ -12,6 +12,7 @@ enum Endpoint {
     static let baseURL = "https://wizetwitterproxy.herokuapp.com"
     
     case timeline
+    case getTweet(id: String)
     case likeTweet(id: String)
     case commentTweet(id: String, comment: String)
 }
@@ -21,6 +22,8 @@ extension Endpoint {
         switch self {
         case .timeline:
             return "/api/tweet"
+        case .getTweet(let id):
+            return "/api/tweet/\(id)"
         case .likeTweet(let id):
             return "/api/tweet/\(id)/like"
         case .commentTweet(let id, _):
@@ -30,7 +33,7 @@ extension Endpoint {
     
     var request: URLRequest {
         switch self {
-        case .timeline:
+        case .timeline, .getTweet(_):
             let url = URL(string: Endpoint.baseURL + string)!
             return URLRequest(url: url)
         case .likeTweet(_):

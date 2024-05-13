@@ -44,3 +44,31 @@ struct TweetViewModel: TweetViewModelProtocol {
         self.item = item
     }
 }
+
+protocol TweetCommentViewModelProtocol {
+    var content: String { get }
+    var nickName: String { get }
+    var userName: String { get }
+    
+    init(item: TweetComment)
+}
+
+struct TweetCommentViewModel: TweetCommentViewModelProtocol {
+    private let item: TweetComment
+    
+    var content: String {
+        return item.text
+    }
+    
+    var nickName: String {
+        return item.user.nickname
+    }
+    
+    var userName: String {
+        return item.user.name
+    }
+    
+    init(item: TweetComment) {
+        self.item = item
+    }
+}

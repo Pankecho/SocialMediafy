@@ -1,5 +1,5 @@
 //
-//  TweetFeedViewModelTests.swift
+//  TweetDetailViewModelTests.swift
 //  Social MediafyTests
 //
 //  Created by Juan Pablo Martinez Ruiz on 12/05/24.
@@ -8,16 +8,16 @@
 import XCTest
 @testable import Social_Mediafy
 
-final class TweetFeedViewModelTests: XCTestCase {
-    var sut: TweetFeedViewModelProtocol!
-    var api: TweetAPIProtocol!
+final class TweetDetailViewModelTests: XCTestCase {
+    var sut: TweetDetailViewModelProtocol!
+    var api: TweetDetailAPIProtocol!
     var fakeSession: FakeSession!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
         fakeSession = FakeSession()
-        api = TweetAPI(session: fakeSession)
-        sut = TweetFeedViewModel(provider: api)
+        api = TweetDetailAPI(session: fakeSession)
+        sut = TweetDetailViewModel(id: "id", provider: api)
     }
 
     override func tearDownWithError() throws {
@@ -27,19 +27,19 @@ final class TweetFeedViewModelTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testGetTweetsLoadingState() {
+    func testGetTweetDetailLoadingState() {
       // When
-      sut.getTweets()
+      sut.getTweet()
         
       // Then
       XCTAssertEqual(sut.state.value, .loading)
     }
 
-    func testGetTweetsSuccessLoadingState() throws {
+    func testGetTweetDetailSuccessLoadingState() throws {
         // Given
-        fakeSession.data = try TweetStub().tweetsData(number: 3)
+        fakeSession.data = try TweetDetailStub().tweetDetailData()
         var changeState: Bool = false
-        let expectation = expectation(description: "Fetched tweet timeline")
+        let expectation = expectation(description: "Fetched tweet detail")
         sut.state.bind { state in
           switch state {
           case .success:
@@ -51,18 +51,18 @@ final class TweetFeedViewModelTests: XCTestCase {
         }
 
         // When
-        sut.getTweets()
+        sut.getTweet()
 
         // Then
         wait(for: [expectation], timeout: 5.0)
         XCTAssertTrue(changeState)
     }
 
-    func testGetTweetsFailureLoadingState() throws {
+    func testGetTweetDetailFailureLoadingState() throws {
         // Given
         fakeSession.data = try TweetStub().tweetData()
         var changeState: Bool = false
-        let expectation = expectation(description: "Fetched tweet timeline")
+        let expectation = expectation(description: "Fetched tweet detail")
         sut.state.bind { state in
           switch state {
           case .failure:
@@ -74,17 +74,17 @@ final class TweetFeedViewModelTests: XCTestCase {
         }
 
         // When
-        sut.getTweets()
+        sut.getTweet()
 
         // Then
         wait(for: [expectation], timeout: 5.0)
         XCTAssertTrue(changeState)
     }
 
-    func testGetTweetsSuccessData() throws {
+    func testGetTweetDetailSuccessData() throws {
         // Given
-        fakeSession.data = try TweetStub().tweetsData(number: 3)
-        let expectation = expectation(description: "Fetched tweet timeline")
+        fakeSession.data = try TweetDetailStub().tweetDetailData()
+        let expectation = expectation(description: "Fetched tweet detail")
         sut.state.bind { state in
           switch state {
           case .success:
@@ -95,10 +95,13 @@ final class TweetFeedViewModelTests: XCTestCase {
         }
 
         // When
-        sut.getTweets()
+        sut.getTweet()
 
         // Then
         wait(for: [expectation], timeout: 5.0)
-        XCTAssertTrue(sut.tweetCount > 0)
+        XCTAssertTrue(!sut.content.isEmpty)
+        XCTAssertTrue(!sut.userName.isEmpty)
+        XCTAssertTrue(!sut.nickName.isEmpty)
+        XCTAssertTrue(sut.commentCount > 0)
     }
 }
