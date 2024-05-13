@@ -8,7 +8,7 @@
 import UIKit
 
 final class CreationViewController: UIViewController {
-    private let viewModel: CreationViewModelProtocol
+    private var viewModel: CreationViewModelProtocol
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -42,6 +42,8 @@ final class CreationViewController: UIViewController {
         super.viewDidLoad()
         setup()
         layout()
+        
+        bindViewModel()
         
         textView.becomeFirstResponder()
     }
@@ -80,6 +82,20 @@ final class CreationViewController: UIViewController {
             textView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
             textView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80)
         ])
+    }
+    
+    private func bindViewModel() {
+        viewModel.state.bind { state in
+            guard let state = state else { return }
+            switch state {
+            case .success:
+                DispatchQueue.main.async { [weak self] in
+                    self?.dismiss(animated: true)
+                }
+            case .loading, .failure:
+                break
+            }
+        }
     }
     
     @objc

@@ -11,4 +11,6 @@ import UIKit
 protocol ViewControllerFactory {
     func feedViewController() -> UIViewController
     func detailViewController(id: String) -> UIViewController
+    func commentCreationViewController(id: String) -> UIViewController
+    func tweetCreationViewController() -> UIViewController
 }

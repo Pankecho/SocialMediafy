@@ -18,4 +18,16 @@ class iOSViewControllerFactory: ViewControllerFactory {
         let viewModel = TweetDetailViewModel(id: id, provider: TweetDetailAPI(session: .shared))
         return DetailViewController(viewModel: viewModel)
     }
+    
+    func commentCreationViewController(id: String) -> UIViewController {
+        let viewController = CreationViewController(viewModel: CommentCreationViewModel(id: id,
+                                                                                        provider: CommentCreationAPI(session: .shared)))
+        return viewController
+    }
+    
+    func tweetCreationViewController() -> UIViewController {
+        let viewController = CreationViewController(viewModel: TweetCreationViewModel(id: "",
+                                                                                      provider: PostCreationAPI(session: .shared)))
+        return viewController
+    }
 }

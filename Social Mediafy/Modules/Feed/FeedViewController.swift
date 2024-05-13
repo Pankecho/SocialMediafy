@@ -18,7 +18,6 @@ final class FeedViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.register(TweetCell.self,
                            forCellReuseIdentifier: "cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -104,18 +103,12 @@ extension FeedViewController: UITableViewDataSource {
         }
         
         let item = viewModel.getItem(at: indexPath.row)
-        cell.configure(using: item)
-        return cell
-    }
-}
-
-extension FeedViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard viewModel.tweetCount > 0 else {
-            return
+        cell.configure(using: item) {
+            // TODO: Add like
+        } commentHandler: { [weak self] in
+            self?.delegate?.routeToDetail(id: item.id)
         }
-        
-        let item = viewModel.getItem(at: indexPath.row)
-        delegate?.routeToDetail(id: item.id)
+
+        return cell
     }
 }

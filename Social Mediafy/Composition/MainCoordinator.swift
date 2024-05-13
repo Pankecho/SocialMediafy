@@ -25,8 +25,7 @@ class MainCoordinator: Coordinator {
     }
     
     func presentTweetCreationViewController() {
-        let viewController = CreationViewController(viewModel: TweetCreationViewModel(id: "",
-                                                                                      provider: PostCreationAPI(session: .shared)))
+        let viewController = viewControllerFactory.tweetCreationViewController()
         rootViewController.present(UINavigationController(rootViewController: viewController), animated: true)
     }
     
@@ -37,8 +36,7 @@ class MainCoordinator: Coordinator {
     }
     
     func presentCommentCreationViewController(id: String) {
-        let viewController = CreationViewController(viewModel: CommentCreationViewModel(id: "",
-                                                                                        provider: CommentCreationAPI(session: .shared)))
+        let viewController = viewControllerFactory.commentCreationViewController(id: id)
         rootViewController.present(UINavigationController(rootViewController: viewController), animated: true)
     }
 }

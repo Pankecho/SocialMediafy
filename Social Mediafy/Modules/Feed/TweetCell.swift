@@ -39,11 +39,15 @@ final class TweetCell: UITableViewCell {
         return label
     }()
     
-    private lazy var favoriteImageView: UIImageView = {
-        let imageView = UIImageView(image: .init(.fav))
-        imageView.tintColor = .black
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+    private lazy var favoriteImageView: UIButton = {
+        let button = UIButton()
+        button.setImage(.init(.fav), for: .normal)
+        button.tintColor = .black
+        button.addTarget(self,
+                         action: #selector(favoriteButtonTap),
+                         for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     private lazy var favoriteCountLabel: UILabel = {
@@ -54,11 +58,15 @@ final class TweetCell: UITableViewCell {
         return label
     }()
     
-    private lazy var commentImageView: UIImageView = {
-        let imageView = UIImageView(image: .init(.comment))
-        imageView.tintColor = .black
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+    private lazy var commentImageView: UIButton = {
+        let button = UIButton()
+        button.setImage(.init(.comment), for: .normal)
+        button.tintColor = .black
+        button.addTarget(self,
+                         action: #selector(commentButtonTap),
+                         for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     private lazy var commentCountLabel: UILabel = {
@@ -68,6 +76,10 @@ final class TweetCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    private var likeButtonTapped: (() -> Void)?
+    
+    private var commentButtonTapped: (() -> Void)?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -123,8 +135,8 @@ final class TweetCell: UITableViewCell {
             contentLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor,
                                                 constant: -16),
             
-            favoriteImageView.widthAnchor.constraint(equalToConstant: 16),
-            favoriteImageView.heightAnchor.constraint(equalToConstant: 16),
+            favoriteImageView.widthAnchor.constraint(equalToConstant: 24),
+            favoriteImageView.heightAnchor.constraint(equalToConstant: 24),
             favoriteImageView.topAnchor.constraint(equalTo: contentLabel.bottomAnchor,
                                                    constant: 16),
             favoriteImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor,
@@ -134,10 +146,10 @@ final class TweetCell: UITableViewCell {
             
             favoriteCountLabel.centerYAnchor.constraint(equalTo: favoriteImageView.centerYAnchor),
             favoriteCountLabel.leftAnchor.constraint(equalTo: favoriteImageView.rightAnchor,
-                                                    constant: 4),
+                                                     constant: 4),
             
-            commentImageView.widthAnchor.constraint(equalToConstant: 16),
-            commentImageView.heightAnchor.constraint(equalToConstant: 16),
+            commentImageView.widthAnchor.constraint(equalToConstant: 24),
+            commentImageView.heightAnchor.constraint(equalToConstant: 24),
             commentImageView.topAnchor.constraint(equalTo: contentLabel.bottomAnchor,
                                                   constant: 16),
             commentImageView.leftAnchor.constraint(equalTo: contentView.centerXAnchor,
@@ -151,11 +163,34 @@ final class TweetCell: UITableViewCell {
         ])
     }
     
-    public func configure(using viewModel: TweetViewModelProtocol) {
+    public func configure(using viewModel: TweetViewModelProtocol,
+                          favHandler: (() -> Void)?,
+                          commentHandler: (() -> Void)?) {
         nameLabel.text = viewModel.userName
         nickNameLabel.text = "@\(viewModel.nickName)"
         contentLabel.text = viewModel.content
         favoriteCountLabel.text = viewModel.likeCount
         commentCountLabel.text = viewModel.commentCount
+        
+        self.likeButtonTapped = favHandler
+        self.commentButtonTapped = commentHandler
+    }
+    
+    @objc
+    private func favoriteButtonTap() {
+        UIView.animate(withDuration: 0.1, animations: { [weak self] in
+            self?.favoriteImageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        }) { _ in
+            UIView.animate(withDuration: 0.1) { [weak self] in
+                self?.favoriteImageView.transform = .identity
+            }
+        }
+        
+        likeButtonTapped?()
+    }
+    
+    @objc
+    private func commentButtonTap() {
+        commentButtonTapped?()
     }
 }
