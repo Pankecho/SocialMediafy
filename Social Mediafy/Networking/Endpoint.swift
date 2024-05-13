@@ -8,8 +8,7 @@
 import Foundation
 
 enum Endpoint {
-    // TODO: Change the baseURL
-    static let baseURL = "https://wizetwitterproxy.herokuapp.com"
+    static let baseURL = "https://run.mocky.io/v3"
     
     case timeline
     case getTweet(id: String)
@@ -21,9 +20,9 @@ extension Endpoint {
     var string: String {
         switch self {
         case .timeline:
-            return "/api/tweet"
-        case .getTweet(let id):
-            return "/api/tweet/\(id)"
+            return "/8dfa01c8-68c3-486b-b566-e0668b587101"
+        case .getTweet(_):
+            return "/a8dc2e18-372e-4395-90e4-b1990ac1da5e"
         case .likeTweet(let id):
             return "/api/tweet/\(id)/like"
         case .commentTweet(let id, _):
