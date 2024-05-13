@@ -8,6 +8,7 @@
 import Foundation
 
 protocol TweetDetailViewModelProtocol {
+    var id: String { get }
     var content: String { get }
     var nickName: String { get }
     var userName: String { get }
@@ -26,6 +27,10 @@ final class TweetDetailViewModel: TweetDetailViewModelProtocol {
     private var item: TweetDetail = .empty
     
     var state: Observer<ViewModelState> = Observer<ViewModelState>()
+    
+    var id: String {
+        return item.id
+    }
     
     var content: String {
         return item.text

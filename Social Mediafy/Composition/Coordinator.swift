@@ -11,5 +11,7 @@ import UIKit
 protocol Coordinator {
     var rootViewController: UINavigationController { get set }
     func start()
+    func presentTweetCreationViewController()
     func pushDetailViewController(id: String)
+    func presentCommentCreationViewController(id: String)
 }

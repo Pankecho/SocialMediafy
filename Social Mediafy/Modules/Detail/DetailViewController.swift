@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol DetailViewControllerDelegate: AnyObject {
+    func routeToCommentCreation(id: String)
+}
+
 final class DetailViewController: UIViewController {
     private var viewModel: TweetDetailViewModelProtocol
+    
+    weak var delegate: DetailViewControllerDelegate?
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -41,8 +47,15 @@ final class DetailViewController: UIViewController {
     
     private func setup() {
         navigationItem.title = "Comments"
-
+        
         view.backgroundColor = .white
+        
+        let addCommentButton = UIBarButtonItem(barButtonSystemItem: .add,
+                                               target: self,
+                                               action: #selector(routeToCommentCreation))
+
+        addCommentButton.tintColor = .black
+        navigationItem.rightBarButtonItem = addCommentButton
     }
     
     private func layout() {
@@ -69,22 +82,27 @@ final class DetailViewController: UIViewController {
             }
         }
     }
+    
+    @objc
+    private func routeToCommentCreation() {
+        delegate?.routeToCommentCreation(id: viewModel.id)
+    }
 }
 
 extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.commentCount
     }
-
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
-                                                   for: indexPath) as? TweetCommentCell,
-          viewModel.commentCount > 0 else {
-        return .init()
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
+                                                       for: indexPath) as? TweetCommentCell,
+              viewModel.commentCount > 0 else {
+            return .init()
+        }
+        
+        let item = viewModel.getComment(at: indexPath.row)
+        cell.configure(using: item)
+        return cell
     }
-
-    let item = viewModel.getComment(at: indexPath.row)
-    cell.configure(using: item)
-    return cell
-}
 }

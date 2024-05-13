@@ -122,42 +122,6 @@ final class TweetDetailAPITests: XCTestCase {
         XCTAssertEqual(tweet.comments.count, 2)
     }
     
-    func testCommentNetworkResponse() {
-        // given
-        let expectation = expectation(description: "tweetdetail comment expectation")
-        var response = false
-        
-        // when
-        sut.comment(id: "id", text: "Hola") { result in
-            response = true
-            expectation.fulfill()
-        }
-        wait(for: [expectation], timeout: 5.0)
-        XCTAssertTrue(response)
-    }
-    
-    func testCommentNetworkResponseWithError() {
-        // given
-        let expectation = expectation(description: "tweetdetail comment expectation")
-        var expectedError: TweetAPIError?
-        session.error = TweetAPIError.response
-        
-        // when
-        sut.comment(id: "id", text: "Hola") { result in
-            switch result {
-            case .failure(let error):
-                expectedError = error as? TweetAPIError
-                expectation.fulfill()
-            default:
-                break
-            }
-        }
-        
-        // then
-        wait(for: [expectation], timeout: 5.0)
-        XCTAssertNotNil(expectedError)
-    }
-    
     override func tearDown() {
         super.tearDown()
         sut = nil

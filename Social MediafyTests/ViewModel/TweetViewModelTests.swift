@@ -17,6 +17,7 @@ final class TweetViewModelTests: XCTestCase {
         let sut = TweetViewModel(item: tweet)
         
         // Then
+        XCTAssertTrue(!sut.id.isEmpty)
         XCTAssertTrue(!sut.content.isEmpty)
         XCTAssertTrue(!sut.userName.isEmpty)
         XCTAssertTrue(!sut.nickName.isEmpty)

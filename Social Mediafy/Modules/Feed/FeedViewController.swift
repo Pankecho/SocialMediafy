@@ -9,6 +9,7 @@ import UIKit
 
 protocol FeedViewControllerDelegate: AnyObject {
     func routeToDetail(id: String)
+    func routeToTweetCreation()
 }
 
 final class FeedViewController: UIViewController {
@@ -48,8 +49,15 @@ final class FeedViewController: UIViewController {
     
     private func setup() {
         navigationItem.title = "Tweets"
-
+        
         view.backgroundColor = .white
+        
+        let addTweetButton = UIBarButtonItem(barButtonSystemItem: .add,
+                                             target: self,
+                                             action: #selector(routeToTweetCreation))
+        
+        addTweetButton.tintColor = .black
+        navigationItem.rightBarButtonItem = addTweetButton
     }
     
     private func layout() {
@@ -76,6 +84,11 @@ final class FeedViewController: UIViewController {
             }
         }
     }
+    
+    @objc
+    private func routeToTweetCreation() {
+        delegate?.routeToTweetCreation()
+    }
 }
 
 extension FeedViewController: UITableViewDataSource {
@@ -89,7 +102,7 @@ extension FeedViewController: UITableViewDataSource {
               viewModel.tweetCount > 0 else {
             return .init()
         }
-
+        
         let item = viewModel.getItem(at: indexPath.row)
         cell.configure(using: item)
         return cell

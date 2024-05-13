@@ -24,14 +24,37 @@ class MainCoordinator: Coordinator {
         rootViewController.pushViewController(vc, animated: false)
     }
     
+    func presentTweetCreationViewController() {
+        let viewController = CreationViewController(viewModel: TweetCreationViewModel(id: "",
+                                                                                      provider: PostCreationAPI(session: .shared)))
+        rootViewController.present(UINavigationController(rootViewController: viewController), animated: true)
+    }
+    
     func pushDetailViewController(id: String) {
-        rootViewController.pushViewController(viewControllerFactory.detailViewController(id: id), animated: true)
+        guard let vc = viewControllerFactory.detailViewController(id: id) as? DetailViewController else { return }
+        vc.delegate = self
+        rootViewController.pushViewController(vc, animated: true)
+    }
+    
+    func presentCommentCreationViewController(id: String) {
+        let viewController = CreationViewController(viewModel: CommentCreationViewModel(id: "",
+                                                                                        provider: CommentCreationAPI(session: .shared)))
+        rootViewController.present(UINavigationController(rootViewController: viewController), animated: true)
     }
 }
-
 
 extension MainCoordinator: FeedViewControllerDelegate {
     func routeToDetail(id: String) {
         pushDetailViewController(id: id)
+    }
+    
+    func routeToTweetCreation() {
+        presentTweetCreationViewController()
+    }
+}
+
+extension MainCoordinator: DetailViewControllerDelegate {
+    func routeToCommentCreation(id: String) {
+        presentCommentCreationViewController(id: id)
     }
 }
